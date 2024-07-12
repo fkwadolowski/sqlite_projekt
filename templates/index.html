@@ -9,7 +9,10 @@
     <ul>
       {% if data %}
       {% for book in data %}
-      <li>{{book.title}} - {{book.author}} - {{book.rating}}/10</li>
+      <li><a href=delete?id={{book.id}}>Delete </a>{{book.title}} -
+        {{book.author}} -
+        {{book.review}}/10
+        <a href="edit?id={{book.id}}">Edit Rating</a></li>
       {% endfor %}
       {% else %}
       <p>Library is empty.</p>
